@@ -3,7 +3,7 @@ async function handleRequest(request) {
     if (!userAgent.includes('discord')) {
         return Response.redirect('https://blog.flky.dev', 301);
     } else {
-    return fetch("https://discorddemo.flky.dev/demo.jpeg");
+    return fetch("https://discordredirect.flky.dev/demo.jpeg");
 }}
   
   addEventListener('fetch', event => {
