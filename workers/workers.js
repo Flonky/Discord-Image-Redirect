@@ -1,9 +1,10 @@
 async function handleRequest(request) {
     const userAgent = request.headers.get('User-Agent') || '';
-    if (!userAgent.includes('discordapp')) {
-        return Response.redirect('https://blog.flky.dev');
-    }
-  }
+    if (!userAgent.includes('discord')) {
+        return Response.redirect('https://blog.flky.dev', 301);
+    } else {
+    return fetch("https://discorddemo.flky.dev/demo.jpeg");
+}}
   
   addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request));
